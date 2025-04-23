@@ -1,0 +1,694 @@
+{
+    "statusCode": 200,
+    "page": 0,
+    "data": {
+        "id": "id01",
+        "video": {
+            "thumb": "https://videos.pexels.com/video-files/30391324/13024292_1920_1080_24fps.mp4",
+            "url": "https://videos.pexels.com/video-files/30391324/13024292_1920_1080_24fps.mp4"
+        },
+        "images": [
+            {
+                "id": "1",
+                "url": "https://www.ikea.com/ext/ingkadam/m/3294db8bde39cbbf/original/PH181382-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.63333",
+                        "y": "0.6",
+                        "price": 438,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.16667",
+                        "y": "0.55",
+                        "price": 169,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.86667",
+                        "y": "0.8",
+                        "price": 99,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "4",
+                        "x": "0.33333",
+                        "y": "0.3",
+                        "price": 99,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "5",
+                        "x": "0.5",
+                        "y": "0.075",
+                        "price": 24.9,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "2",
+                "url": "https://www.ikea.com/ext/ingkadam/m/5d260e0639adeccb/original/PH175831-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.6",
+                        "y": "0.875",
+                        "price": 36.91,
+                        "currency": "USD",
+                        "unit": "m2"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.13333",
+                        "y": "0.25",
+                        "price": 249,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.66667",
+                        "y": "0.475",
+                        "price": 89,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "4",
+                        "x": "0.4",
+                        "y": "0.6",
+                        "price": 69,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "3",
+                "url": "https://www.ikea.com/ext/ingkadam/m/6ed764a055bf2bce/original/PH165817-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.5",
+                        "y": "0.425",
+                        "price": 30,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.33333",
+                        "y": "0.45",
+                        "price": 3.5,
+                        "currency": "USD",
+                        "unit": "2 pieces"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.36667",
+                        "y": "0.6",
+                        "price": 3.5,
+                        "currency": "USD",
+                        "unit": "5 pieces"
+                    }
+                 ]
+            },
+            {
+                "id": "4",
+                "url": "https://www.ikea.com/ext/ingkadam/m/43d4cf46a04f5d06/original/PH159095-crop002.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.5",
+                        "y": "0.9",
+                        "price": 404,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.2",
+                        "y": "0.5",
+                        "price": 179,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.9",
+                        "y": "0.85",
+                        "price": 59,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "4",
+                        "x": "0.5",
+                        "y": "0.775",
+                        "price": 39.9,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "5",
+                "url": "https://www.ikea.com/ext/ingkadam/m/69b49304e07f5ed6/original/PH176528.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.5",
+                        "y": "0.9",
+                        "price": 4,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.82",
+                        "y": "0.8",
+                        "price": 1,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.33333",
+                        "y": "0.95",
+                        "price": 12.9,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "4",
+                        "x": "0.63333",
+                        "y": "0.825",
+                        "price": 4.5,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "6",
+                "url": "https://www.ikea.com/ext/ingkadam/m/7eb24ad90c4185b/original/PH167132-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.66667",
+                        "y": "0.675",
+                        "price": 25,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.83333",
+                        "y": "0.225",
+                        "price": 5.5,
+                        "currency": "USD",
+                        "unit": "2 pieces"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.63333",
+                        "y": "0.325",
+                        "price": 65,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "4",
+                        "x": "0.68",
+                        "y": "0.45",
+                        "price": 19.9,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "5",
+                        "x": "0.93333",
+                        "y": "0.475",
+                        "price": 20,
+                        "currency": "USD",
+                        "unit": "2 pieces"
+                    }
+                 ]
+            },
+            {
+                "id": "7",
+                "url": "https://www.ikea.com/ext/ingkadam/m/3b0069693e5cf875/original/PH181123-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.5",
+                        "y": "0.5",
+                        "price": 1299,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.4",
+                        "y": "0.7",
+                        "price": 399,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.73333",
+                        "y": "0.15",
+                        "price": 35,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "4",
+                        "x": "0.74667",
+                        "y": "0.35",
+                        "price": 349,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "5",
+                        "x": "0.2",
+                        "y": "0.6",
+                        "price": 79,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "8",
+                "url": "https://www.ikea.com/ext/ingkadam/m/6b6cc7f1e45dc5a9/original/PH181383-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.4",
+                        "y": "0.5",
+                        "price": 79,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.6",
+                        "y": "0.8",
+                        "price": 99,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.2",
+                        "y": "0.8",
+                        "price": 189,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "9",
+                "url": "https://www.ikea.com/ext/ingkadam/m/70db3f552c368bc5/original/PH168796-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.33333",
+                        "y": "0.6",
+                        "price": 334,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.1",
+                        "y": "0.65",
+                        "price": 241,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.68",
+                        "y": "0.6",
+                        "price": 6,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "4",
+                        "x": "0.73333",
+                        "y": "0.3",
+                        "price": 495,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "10",
+                "url": "https://www.ikea.com/ext/ingkadam/m/6b9cc6b1bacccd56/original/PH163129-crop003.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.5",
+                        "y": "0.45",
+                        "price": 30,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.1",
+                        "y": "0.425",
+                        "price": 5,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.4",
+                        "y": "0.15",
+                        "price": 39,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "4",
+                        "x": "0.64",
+                        "y": "0.7",
+                        "price": 30,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "11",
+                "url": "https://www.ikea.com/ext/ingkadam/m/375a754992e2083b/original/PH181287-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.7",
+                        "y": "0.6",
+                        "price": 505,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.5",
+                        "y": "0.675",
+                        "price": 24.9,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.26667",
+                        "y": "0.3",
+                        "price": 40,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "4",
+                        "x": "0.44",
+                        "y": "0.9",
+                        "price": 699,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "12",
+                "url": "https://www.ikea.com/ext/ingkadam/m/34278c7b6897936e/original/PH176582.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.3",
+                        "y": "0.75",
+                        "price": 12.9,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.17333",
+                        "y": "0.7",
+                        "price": 2.5,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.2",
+                        "y": "0.55",
+                        "price": 6,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "13",
+                "url": "https://www.ikea.com/ext/ingkadam/m/13be8a6c6d42c4b0/original/PH180915-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.7",
+                        "y": "0.8",
+                        "price": 169,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.66667",
+                        "y": "0.25",
+                        "price": 42.9,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.5",
+                        "y": "0.375",
+                        "price": 89,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "14",
+                "url": "https://www.ikea.com/ext/ingkadam/m/6d48d1c89b92ca0d/original/PH156165-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.5",
+                        "y": "0.5",
+                        "price": 19.9,
+                        "currency": "USD",
+                        "unit": "2 pieces"
+                    }
+                 ]
+            },
+            {
+                "id": "15",
+                "url": "https://www.ikea.com/ext/ingkadam/m/7c2adecbe5ac3037/original/PH180205.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.76667",
+                        "y": "0.5",
+                        "price": 239,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.4",
+                        "y": "0.2",
+                        "price": 75,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.6",
+                        "y": "0.25",
+                        "price": 6.5,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "4",
+                        "x": "0.5",
+                        "y": "0.9",
+                        "price": 14.9,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "16",
+                "url": "https://www.ikea.com/ext/ingkadam/m/7a5c251a9bad7ff3/original/PH181286-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.53333",
+                        "y": "0.525",
+                        "price": 629,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.86667",
+                        "y": "0.575",
+                        "price": 209,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.3",
+                        "y": "0.65",
+                        "price": 89,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "17",
+                "url": "https://www.ikea.com/ext/ingkadam/m/26adc9cc07985/original/PH178278-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.56667",
+                        "y": "0.7",
+                        "price": 19.9,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.8",
+                        "y": "0.5",
+                        "price": 229,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.33333",
+                        "y": "0.4",
+                        "price": 31.9,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "18",
+                "url": "https://www.ikea.com/ext/ingkadam/m/7c923e19aaaa90b5/original/PH168401-crop003.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.3",
+                        "y": "0.3",
+                        "price": 369,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.2",
+                        "y": "0.6",
+                        "price": 110,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.3",
+                        "y": "0.8",
+                        "price": 159,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "19",
+                "url": "https://www.ikea.com/ext/ingkadam/m/4b2a1bdf592253a9/original/PH169608-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.7",
+                        "y": "0.6",
+                        "price": 9.5,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.23",
+                        "y": "0.45",
+                        "price": 4,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "3",
+                        "x": "0.4",
+                        "y": "0.6",
+                        "price": 4.5,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            },
+            {
+                "id": "20",
+                "url": "https://www.ikea.com/ext/ingkadam/m/1a10b0b2d6714fdf/original/PH178237-crop001.jpg?f=m",
+                "tags": [
+                    {
+                        "id": "1",
+                        "x": "0.4",
+                        "y": "0.6",
+                        "price": 99,
+                        "currency": "USD",
+                        "unit": "piece"
+                    },
+                    {
+                        "id": "2",
+                        "x": "0.8",
+                        "y": "0.35",
+                        "price": 179,
+                        "currency": "USD",
+                        "unit": "piece"
+                    }
+                 ]
+            }
+        ]
+    }
+}
+
