@@ -10,7 +10,7 @@ import Foundation
 struct API {
     func getData(page: Int) async -> DataResponse? {
         return await withCheckedContinuation { continuation in
-            let fileName: String = {
+            let fileName: String? = {
                 switch page {
                 case 0:
                     return "previous"
@@ -19,11 +19,11 @@ struct API {
                 case 2:
                     return "next"
                 default:
-                    return ""
+                    return nil
                 }
             }()
-            guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
-                print("💥 JSON file not found in bundle")
+            guard let fileName = fileName, let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+                print("💥 JSON file not found in bundle page = \(page)")
                 continuation.resume(returning: nil)
                 return
             }

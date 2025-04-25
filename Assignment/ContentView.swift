@@ -8,42 +8,52 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var viewModel = ViewModel(name: "hahaha", api: API())
+    @State private var viewModel = ViewModel(api: API())
+    private let numberOfColumns = UIDevice.current.userInterfaceIdiom == .pad ? 3 : 2
     
-    private func getItemHeight(index: Int) -> CGFloat {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            switch index % 3 {
-            case 0:
-                return 340
-            case 1:
-                return 270
-            default:
-                return 230
-            }
+    private func getItemHeight(index: Int?) -> CGFloat {
+        guard let index = index else {
+            return .leastNonzeroMagnitude
+        }
+        if index >= numberOfColumns {
+            return 200.0 + 80.0 * CGFloat(numberOfColumns - 1)
         } else {
-            return index % 2 == 0 ? 120 : 160
+            return 200.0 + 80.0 * CGFloat(index)
         }
     }
     
     var body: some View {
-        ScrollView(content: {
-            PinterestVStack(columns: UIDevice.current.userInterfaceIdiom == .pad ? 3 : 2, spacing: 12) {
-                ForEach(viewModel.items) { item in
-                    switch item {
-                    case .ads:
-                        EmptyView()
-                    case .image(let image):
-                        let index = viewModel.items.firstIndex(of: item) ?? 0
-                        ImagePlaceholderView(image: image, height: getItemHeight(index: index))
-                    case .video(let video):
-                        VideoPlaceholderView()
-                            .layoutValue(key: PinterestFullWidthKey.self, value: true)
+        ScrollView(showsIndicators: false) {
+            PinterestVStack(columns: numberOfColumns, spacing: 12) {
+                ForEach(viewModel.items) { section in
+                    ForEach(section.items) { item in
+                        switch item {
+                        case .image(let model):
+                            ImageItemView(image: model, height: getItemHeight(index: section.items.firstIndex(of: item)))
+                                .onAppear {
+                                    if item == section.items.last {
+                                        Task {
+                                            await viewModel.loadMore()
+                                        }
+                                    }
+                                }
+                        case .video(let video):
+                            VideoItemView(video: video)
+                                .layoutValue(key: PinterestFullWidthKey.self, value: true)
+                                .frame(height: UIDevice.current.userInterfaceIdiom == .pad ? 400 : 200)
+                        default:
+                            EmptyView()
+                        }
                     }
                 }
             }
-        })
+            .padding()
+        }
         .task {
-            await viewModel.getData(page: 1)
+            await viewModel.loadData()
+        }
+        .refreshable {
+            await viewModel.loadPrevious()
         }
     }
 }
@@ -52,36 +62,3 @@ struct ContentView: View {
     ContentView()
 }
 
-struct VideoPlaceholderView: View {
-  var body: some View {
-    VStack {
-      Image(systemName: "play.circle.fill")
-        .resizable()
-        .scaledToFit()
-        .frame(width: 50, height: 50)
-        .foregroundColor(.green)
-        
-      Text("Main Video Content")
-        .font(.headline)
-    }
-    .frame(maxWidth: .infinity)
-    .background(Color.green.opacity(0.2))
-  }
-}
-
-struct ImagePlaceholderView: View {
-    let image: ImageModel
-    let height: CGFloat
-    
-    var body: some View {
-        Rectangle()
-            .fill(Color.blue.opacity(0.3))
-            .frame(height: height)
-            .overlay(
-                Text("Item \(image.id)")
-                    .foregroundColor(.black)
-                    .font(.caption)
-            )
-            .cornerRadius(8)
-    }
-}
