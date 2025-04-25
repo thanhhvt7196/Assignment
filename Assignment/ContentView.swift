@@ -27,23 +27,14 @@ struct ContentView: View {
             PinterestVStack(columns: numberOfColumns, spacing: 12) {
                 ForEach(viewModel.items) { section in
                     ForEach(section.items) { item in
-                        switch item {
-                        case .image(let model):
-                            ImageItemView(image: model, height: getItemHeight(index: section.items.firstIndex(of: item)))
-                                .onAppear {
-                                    if item == section.items.last {
-                                        Task {
-                                            await viewModel.loadMore()
-                                        }
+                        itemView(item: item, index: section.items.firstIndex(of: item) ?? -1)
+                            .onAppear {
+                                if item == section.items.last {
+                                    Task {
+                                        await viewModel.loadMore()
                                     }
                                 }
-                        case .video(let video):
-                            VideoItemView(video: video)
-                                .layoutValue(key: PinterestFullWidthKey.self, value: true)
-                                .frame(height: UIDevice.current.userInterfaceIdiom == .pad ? 400 : 200)
-                        default:
-                            EmptyView()
-                        }
+                            }
                     }
                 }
             }
@@ -54,6 +45,20 @@ struct ContentView: View {
         }
         .refreshable {
             await viewModel.loadPrevious()
+        }
+    }
+    
+    @ViewBuilder
+    private func itemView(item: ItemType, index: Int) -> some View {
+        switch item {
+        case .image(let model):
+            ImageItemView(image: model, height: getItemHeight(index: index))
+        case .video(let video):
+            VideoItemView(video: video)
+                .layoutValue(key: PinterestFullWidthKey.self, value: true)
+                .frame(height: UIDevice.current.userInterfaceIdiom == .pad ? 400 : 200)
+        case .ads(let url):
+            AdItemView(index: index, url: url, height: getItemHeight(index: index))
         }
     }
 }

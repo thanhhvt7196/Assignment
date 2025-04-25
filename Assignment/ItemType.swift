@@ -35,5 +35,5 @@ enum ItemType: Hashable, Identifiable {
     
     case video(VideoModel)
     case image(ImageModel)
-    case ads
+    case ads(String)
 }

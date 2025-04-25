@@ -12,7 +12,5 @@ struct DataModel: Codable {
 }
 
 struct DataResponse: Codable {
-    let statusCode: Int
-    let page: Int
     let data: DataModel
 }

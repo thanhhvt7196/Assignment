@@ -48,24 +48,33 @@ class ViewModel {
         defer {
             isLoadMore = false
         }
-        guard let result = await api.getData(page: page) else {
+        guard let imageResult = await api.getImages(page: page) else {
             return
         }
+        let adsResult = await api.getAds()
+        
         if page > 1 {
             canLoadMore = false
         }
-        let video = result.data.video
+        let video = imageResult.data.video
         items.append(.init(type: .video, items: [.video(video)]))
         
-        let images = result.data.images
-        items.append(.init(type: .imageAndAd, items: images.map { .image($0) }))
+        let images = imageResult.data.images
+        var imagesItem = images.map { ItemType.image($0) }
+        let fibonaciIndexs = images.count.getAllSmallerFibonacciNumbers()
+        fibonaciIndexs.enumerated().forEach { index, item in
+            if adsResult.indices.contains(index), imagesItem.canInsert(at: item) {
+                imagesItem.insert(.ads(adsResult[index].urls.small), at: item)
+            }
+        }
+        items.append(.init(type: .imageAndAd, items: imagesItem))
     }
     
     private func loadPrevious(page: Int) async {
         defer {
             isLoadPrevious = false
         }
-        guard let result = await api.getData(page: page) else {
+        guard let result = await api.getImages(page: page) else {
             return
         }
         canLoadPrevious = false
