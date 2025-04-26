@@ -11,13 +11,6 @@ struct PinterestHeightKey: LayoutValueKey {
   static let defaultValue: CGFloat? = nil
 }
 
-extension View {
-  /// Dùng modifier này để gắn height cho từng item
-  func pinterestHeight(_ h: CGFloat) -> some View {
-    layoutValue(key: PinterestHeightKey.self, value: h)
-  }
-}
-
 struct PinterestFullWidthKey: LayoutValueKey {
     static let defaultValue = false
 }
@@ -45,16 +38,13 @@ struct PinterestVStack: Layout {
         let itemWidth = (maxWidth - spacing * Double(columns - 1)) / Double(columns)
         
         var xIndex = 0
-        // khởi tạo mảng chứa “y offset” cho mỗi cột
         var columnsHeights = Array(repeating: bounds?.minY ?? 0, count: columns)
         
         for view in subviews {
             let isFullWidth = view[PinterestFullWidthKey.self]
-            // đọc giá trị height tùy chỉnh (nếu có)
             let customH = view[PinterestHeightKey.self].map(Double.init)
             
             if isFullWidth {
-                // 1) full‑width: dùng maxWidth, height = customH hoặc đo bằng sizeThatFits
                 let y = columnsHeights.max() ?? 0
                 let proposed = ProposedViewSize(width: maxWidth, height: nil)
                 let h = customH
@@ -64,15 +54,12 @@ struct PinterestVStack: Layout {
                                anchor: .topLeading,
                                proposal: proposed)
                 }
-                // cập nhật lại tất cả cột để tránh “gap”
                 let newY = y + h + spacing
                 columnsHeights.indices.forEach { index in
                     columnsHeights[index] = newY
                 }
-//                columnsHeights = columnsHeights.indices.map { _ in newY }
                 
             } else {
-                // 2) ô thường: dùng itemWidth, height = customH hoặc đo qua dimensions()
                 let y = columnsHeights[xIndex]
                 let proposed = ProposedViewSize(width: itemWidth, height: nil)
                 let h = customH
@@ -84,13 +71,11 @@ struct PinterestVStack: Layout {
                                proposal: proposed)
                 }
                 columnsHeights[xIndex] = y + h + spacing
-                // chọn cột thấp nhất cho item tiếp theo
                 xIndex = columnsHeights.enumerated()
                     .min(by: { $0.element < $1.element })!.offset
             }
         }
         
-        // chiều cao bằng cột cao nhất trừ lần spacing cuối
         let totalH = (columnsHeights.max() ?? 0) - spacing
         return .init(width: maxWidth, height: totalH)
     }
